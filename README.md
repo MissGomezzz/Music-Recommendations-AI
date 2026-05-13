@@ -1,4 +1,5 @@
 # Music Recommendation System - Bias Reduction
+## AI: Artificial Intelligence: Friend or Foe of the Artist?
 **Authors:** Daniel Rayo, Ángela Gómez  
 **Course:** Fundamentals of AI - PTIA 2026
 **Date** May 2026
@@ -59,7 +60,7 @@ The closer the average popularity score is to 1.0, the more biased the recommend
 
 ## Considerations
 
-The bias reduction works best when the selected artists are mainstream-heavy. If you select mostly emerging artists, the difference will be smaller — their neighborhood in the graph is already low-popularity. This reflects a real limitation of graph-based recommendation systems and is discussed in the project conclusions.
+The bias reduction works best when the selected artists are mainstream-heavy. If you select mostly emerging artists, the difference will be smaller - their neighborhood in the graph is already low-popularity. This reflects a real limitation of graph-based recommendation systems and is discussed in the project conclusions.
 
 Also, the interface was supported by Claude as we are not very familiarized with the Streamlit library: however, we understand the code and it shows in a simple but complete way how the system makes more balanced recommendations. 
 
