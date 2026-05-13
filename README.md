@@ -1,2 +1,71 @@
-# Music-Recommendations-AI
-This repository shows the project worked on during the Fundamentals of AI class. 
+# Music Recommendation System — Bias Reduction
+**Authors:** Daniel Rayo, Ángela Gómez  
+**Course:** Fundamentals of AI — PTIA 2026
+**Date** May 2026
+
+---
+
+## What is this project about?
+
+A simplified music recommendation system that reduces popularity bias — the tendency of recommendation algorithms to always suggest the most mainstream artists, leaving emerging ones invisible.
+
+The system uses an artist graph where nodes are artists and edges represent musical similarity. It then compares a biased recommendation (one that favors popular artists) against a diversity-corrected one.
+
+---
+
+## How to run it locally
+
+1. Clone the repository
+2. Install dependencies:
+
+```
+py -m pip install -r requirements.txt
+```
+
+3. Run the app:
+
+```
+py -m streamlit run app.py
+```
+---
+
+## Project structure
+
+├── app.py               # Streamlit interface
+
+├── recommendation.py    # Backend logic
+
+├── requirements.txt     # Dependencies
+
+└── images/
+
+└── spotify_filterbubble.png
+
+---
+
+## How it works
+
+1. Select the artists you listen to from the sidebar
+2. The system generates two recommendation lists:
+   - **Without diversity** — biased toward popular artists
+   - **With diversity** — corrected to include emerging artists
+3. A popularity score comparison shows the bias reduction
+
+The closer the average popularity score is to 1.0, the more biased the recommendations are toward mainstream artists.
+
+---
+
+## Technologies
+
+- Python
+- Streamlit — web interface
+- NetworkX — artist graph
+- Matplotlib — graph visualization
+
+---
+
+## Considerations
+
+The bias reduction works best when the selected artists are mainstream-heavy. If you select mostly emerging artists, the difference will be smaller — their neighborhood in the graph is already low-popularity. This reflects a real limitation of graph-based recommendation systems and is discussed in the project conclusions.
+
+---
